@@ -1,6 +1,6 @@
 // 定时鼠标移动
 const robot = require("robotjs");
-
+const jsUtils = require("alanngai-js-utils");
 // Speed up the mouse.
 robot.setMouseDelay(2);
 
@@ -13,4 +13,4 @@ setInterval(() => {
   count++;
 }, 1000);
 
-console.log("starting.");
+console.log(`starting at ${jsUtils.formatDateInPattern(new Date().getTime())}`);
